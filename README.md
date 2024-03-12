@@ -69,6 +69,17 @@ RAILS_ENV=test ./bin/rails db:migrate
 ```
 rake spec
 ```
+Endpoints
+=========
+The API contains the following endpoints:
+
+* `POST /treasures` - Create a new treasure hunt location.
+* `GET /treasures/{id}/winners` - Get the list of winning guesses on a treasure hunt. Can be sorted and paginated.
+* `PUT /treasures/{id}/deactivate` - deactivate a treasure hunt so that no more guesses can be made.
+* `DELETE /treasures/{id}` - deletes a treasure location, and cascade deletes its related guesses.
+* `POST /guesses` - Submit a guess for a given treasure hunt location. Send an email if the guess is a winning guess (within 1000m of treasure).
+
+For details on the attributes, please see the Swagger documentation and the Starting A Game section below.
 
 Starting A Game
 ===============
