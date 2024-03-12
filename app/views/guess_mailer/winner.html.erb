@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Congraulations, <%= @guess.email %>! Your treasure hunt guess won!</h1>
+    <ul>
+      <li>Your guess: <%= @guess.answer %></li>
+      <li>Actual location: <%= @treasure.answer %></li>
+      <li>Distance from actual location: <%= @guess.winning_distance %>m</li>
+    </ul>
+
+    <p>Thanks for playing and have a great day!</p>
+
+    <p>The Treasure Hunt Team</p>
+  </body>
+</html>
