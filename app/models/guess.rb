@@ -19,6 +19,7 @@ class Guess < ApplicationRecord
   scope :winner, -> { where(is_winner: true) }
 
   def mark_as_winner!(treasure, distance)
+    # Geocoder distances are measured in km while we format to m
     winning_distance = distance * 100
 
     Rails.logger.info("[!!!  WINNER !!!] Winning guess for treasure_id #{self.treasure_id} - Email: #{self.email}, Answer: #{self.answer}, Distance: #{winning_distance}m")

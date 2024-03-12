@@ -21,13 +21,16 @@ class Treasure < ApplicationRecord
     self.update!(active: false)
   end
 
-  def validate_guess(guess)
+  def classify_guess(guess)
+    # Determine the km distance between 
+    # the treasure location, and the guess 
     distance = Geocoder::Calculations.distance_between(
       [self.latitude, self.longitude],
       [guess.latitude, guess.longitude],
       units: :km
     )
 
+    # Threshold is 1000m = 1km
     is_winner = distance < WINNING_THRESHOLD
 
     return { winner: is_winner, distance: distance }

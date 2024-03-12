@@ -3,7 +3,7 @@ class GuessesController < ApplicationController
     begin
       find_treasure
       record_guess
-      validate_guess
+      classify_guess
     rescue ActiveRecord::RecordNotFound => e
       render json: { error: e }, status: :not_found
       return
@@ -30,8 +30,8 @@ class GuessesController < ApplicationController
     @guess.save!
   end
 
-  def validate_guess
-    result = @treasure.validate_guess(@guess)
+  def classify_guess
+    result = @treasure.classify_guess(@guess)
 
     if result[:winner]
       @guess.mark_as_winner!(@treasure, result[:distance])
