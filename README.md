@@ -112,6 +112,7 @@ Other Notes
 
 Further Considerations
 ======================
-* By default, Geocoder's default lookup for address validation is Yandex, which given testing appears to be somewhat flaky. I would have liked to have spent more time exploring other third-party libraries that can integrate with this gem (particularly Google Maps), but have submitted due to time constraints.
+* By default, Geocoder's default lookup for address validation is Nominatim, which given testing appears to be somewhat flaky. I would have liked to have spent more time exploring other third-party libraries that can integrate with this gem (particularly Google Maps), but have submitted due to time constraints.
 * The integration tests should cover all API function. Unit tests were skipped for some of the model functions but would have been added if more time allowed.
+* Finding a way to mock Geocoder's underlying #geocode call in tests.
 * Some refactoring of variable re-use, particularly in the integration tests, would have also been nice had I had the time.
