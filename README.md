@@ -17,6 +17,8 @@ Other Dependencies
 * Geocoder
 * Letter Opener
 * RSwag
+* FactoryBot
+* will_paginate
 
 Setup
 =====
