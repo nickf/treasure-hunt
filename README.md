@@ -69,6 +69,9 @@ RAILS_ENV=test ./bin/rails db:migrate
 ```
 rake spec
 ```
+
+![Screenshot 2024-03-12 at 01 17 15](https://github.com/nickf/treasure-hunt/assets/33024/58ea7051-3b24-4cfa-bb12-da426d1e633a)
+
 Endpoints
 =========
 The API contains the following endpoints:
