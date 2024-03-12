@@ -72,7 +72,7 @@ rake spec
 
 Starting A Game
 ===============
-* To begin, find a street address (either on Google Maps or elsewhere) to serve as a treasure location. **NOTE: ** Only a full street address can be specified - this is to make it easier to create treasure hunts + guesses without Geocoder's own address validation failing.
+* To begin, find a street address (either on Google Maps or elsewhere) to serve as a treasure location. **NOTE:** Only a full street address can be specified. This is to make it easier to create treasure hunts + guesses without Geocoder's own address validation failing.
 * Create a new treasure by making a POST request to /treasures, specify an `answer` attribute as your treasure location as a string value.
 * Then, attempt a guess using the ID of the treasure, an alternative street address for the attempted `answer`, and an `email` address of your choice. The request body should look something like:
 
